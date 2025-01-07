@@ -45,7 +45,7 @@ pub fn ping() -> Html {
                 // 发送 HTTP HEAD 请求，仅判断是否可以到达
                 match Request::get(&formatted_url)
                     .method(Method::HEAD)
-                    .mode(web_sys::RequestMode::SameOrigin)
+                    .mode(web_sys::RequestMode::NoCors)
                     .send()
                     .await {
                     Ok(response) => {
