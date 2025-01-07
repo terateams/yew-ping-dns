@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yew Ping and DNS</title>
+<link rel="modulepreload" href="/yew-ping-dns-7aaeba84336a0eac.js" crossorigin=anonymous integrity="sha384-zvP7jMeVWGtddot9fv2Ss5YlCXUEWsSSLel2w+QlnOrotwpq3++ENliB2zNpAu3Z"><link rel="preload" href="/yew-ping-dns-7aaeba84336a0eac_bg.wasm" crossorigin=anonymous integrity="sha384-OjZtqKUUcg8PoqUXtiM2LNNctowLyPatWLxiVn2//5lyYe2c0uh60ytD6LwFiI/c" as="fetch" type="application/wasm"></head>
+<body>
+    <div id="app"></div>
+    <script type="module">
+        import init from "yew_ping_dns.js";
+        init();
+    </script>
+
+<script type="module" nonce="/FmhkWssv44wmD0xSirrFQ==">
+import init, * as bindings from '/Volumes/ExtDISK/github/yew-ping-dns/docs/yew-ping-dns-7aaeba84336a0eac.js';
+const wasm = await init({ module_or_path: '/yew-ping-dns-7aaeba84336a0eac_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
