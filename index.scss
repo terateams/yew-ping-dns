@@ -1,0 +1,154 @@
+/* 容器样式 */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* 输入框样式 */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 按钮样式 */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 结果文本样式 */
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+/* 从 src/components/ping.css 迁移的样式 */
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .button {
+        font-size: 14px;
+    }
+
+    .result {
+        font-size: 12px;
+    }
+}
+
+/* DNS Query Simulator 特定样式 */
+.dns-container {
+    /* 可根据需要添加特定样式 */
+}
+
+.dns-title {
+    /* 可根据需要添加特定样式 */
+}
+
+.dns-input {
+    /* 可根据需要添加特定样式 */
+}
+
+.dns-button {
+    /* 可根据需要添加特定样式 */
+}
+
+.dns-result {
+    /* 可根据需要添加特定样式 */
+}
+
+/* 响应式设计（如果需要） */
+@media (max-width: 600px) {
+    .dns-container {
+        /* 可根据需要调整 */
+    }
+
+    .dns-button {
+        /* 可根据需要调整 */
+    }
+
+    .dns-result {
+        /* 可根据需要调整 */
+    }
+}
+
+/* 主标题样式 */
+.main-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    /* 可以根据需要添加更多样式 */
+}

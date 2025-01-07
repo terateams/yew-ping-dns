@@ -45,7 +45,7 @@ pub fn ping() -> Html {
                 // 发送 HTTP HEAD 请求，仅判断是否可以到达
                 match Request::get(&formatted_url)
                     .method(Method::HEAD)
-                    .mode(web_sys::RequestMode::NoCors)
+                    .mode(web_sys::RequestMode::SameOrigin)
                     .send()
                     .await {
                     Ok(response) => {
@@ -65,11 +65,11 @@ pub fn ping() -> Html {
     };
 
     html! {
-        <div>
-            <h2>{ "Ping URL Simulator" }</h2>
-            <input type="text" placeholder="Enter URL (e.g., example.com)" oninput={on_input} />
-            <button onclick={on_click}>{ "Ping" }</button>
-            <p>{ (*result).clone() }</p>
+        <div class="container">
+            <h2 class="title">{ "Ping URL Simulator" }</h2>
+            <input class="input" type="text" placeholder="Enter URL (e.g., example.com)" oninput={on_input} />
+            <button class="button" onclick={on_click}>{ "Ping" }</button>
+            <p class="result">{ (*result).clone() }</p>
         </div>
     }
 }

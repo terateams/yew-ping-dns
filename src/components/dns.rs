@@ -41,11 +41,11 @@ pub fn dns_query() -> Html {
     };
 
     html! {
-        <div>
-            <h2>{ "DNS Query Simulator" }</h2>
-            <input type="text" placeholder="Enter domain" oninput={on_input} />
-            <button onclick={on_click}>{ "Query" }</button>
-            <p>{ (*result).clone() }</p>
+        <div class="container">
+            <h2 class="title">{ "DNS Query Simulator" }</h2>
+            <input class="input" type="text" placeholder="Enter domain" oninput={on_input} />
+            <button class="button" onclick={on_click}>{ "Query" }</button>
+            <p class="result">{ (*result).clone() }</p>
         </div>
     }
 }

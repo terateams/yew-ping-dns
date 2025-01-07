@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="zh-CN">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yew Ping and DNS</title>
-<link rel="modulepreload" href="/yew-ping-dns/yew-ping-dns-ef3692ce6aa92f9c.js" crossorigin=anonymous integrity="sha384-3WcXm+IP2SXlcdc6UJjnmL3OUsbEZPib34XPQYWo3zS+RdaaQp9njfKigKd/sXNt"><link rel="preload" href="/yew-ping-dns/yew-ping-dns-ef3692ce6aa92f9c_bg.wasm" crossorigin=anonymous integrity="sha384-9mOKEhtotGrQdtNcWDHgQ1eZ4UqElU3L3htE7+95rZHKiduHJ1enu7VIp10qeXuz" as="fetch" type="application/wasm"></head>
-<body>
-    <div id="app"></div>
-    <script type="module">
-        import init from "/yew-ping-dns/yew-ping-dns-ef3692ce6aa92f9c.js";
-        init();
-    </script>
-
-<script type="module" nonce="ybWIGxluvMjlUCKm/RYIlw==">
-import init, * as bindings from '/yew-ping-dns/yew-ping-dns-ef3692ce6aa92f9c.js';
-const wasm = await init({ module_or_path: '/yew-ping-dns/yew-ping-dns-ef3692ce6aa92f9c_bg.wasm' });
+    <title>Yew Ping DNS</title>
+    <!-- 设定资源的基准路径 -->
+    <base href="/yew-ping-dns/">
+    
+<script type="module" nonce="PlbBmxiVJ9p30uyPMf85CQ==">
+import init, * as bindings from '/yew-ping-dns/yew-ping-dns-2134ea9104220665.js';
+const wasm = await init({ module_or_path: '/yew-ping-dns/yew-ping-dns-2134ea9104220665_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -22,5 +17,9 @@ window.wasmBindings = bindings;
 
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
-</script></body>
+</script>
+    <link rel="stylesheet" href="/yew-ping-dns/index-a940063518d7db8d.css" integrity="sha384&#x2D;pn75gJ4Rl&#x2B;M&#x2F;2&#x2F;WPFqQNOuWokT7oo5LMvz8Iv0pZ9WK&#x2F;tkSrCoQ7HfD0jU&#x2B;r6g49"/>
+  <link rel="modulepreload" href="/yew-ping-dns/yew-ping-dns-2134ea9104220665.js" crossorigin=anonymous integrity="sha384-3WcXm+IP2SXlcdc6UJjnmL3OUsbEZPib34XPQYWo3zS+RdaaQp9njfKigKd/sXNt"><link rel="preload" href="/yew-ping-dns/yew-ping-dns-2134ea9104220665_bg.wasm" crossorigin=anonymous integrity="sha384-97CkzTKubNKkaO58vY5vJEsVI6n84ykxwpx1uLtvU1XkYcySbH6J4jW+7AQButlC" as="fetch" type="application/wasm"></head>
+  <body>
+  </body>
 </html>

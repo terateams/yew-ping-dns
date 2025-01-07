@@ -5,8 +5,8 @@ use components::{dns::DnsQuery, ping::Ping};
 #[function_component(App)]
 fn app() -> Html {
     html! {
-        <div>
-            <h1>{ "Ping and DNS Simulation" }</h1>
+        <div class="container">
+            <h1 class="main-title">{ "Ping and DNS Simulation" }</h1>
             <Ping />
             <DnsQuery />
         </div>
