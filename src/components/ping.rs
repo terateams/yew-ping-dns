@@ -1,6 +1,8 @@
 use yew::prelude::*;
 use wasm_bindgen_futures::spawn_local;
-use gloo_net::http::Request;
+use gloo_net::http::{Request, Method};
+use web_sys::js_sys::Date;
+
 
 #[function_component(Ping)]
 pub fn ping() -> Html {
@@ -23,6 +25,7 @@ pub fn ping() -> Html {
             let url = url.clone();
             let result = result.clone();
             spawn_local(async move {
+                let start = Date::now(); // 记录开始时间
                 let url_trimmed = url.trim();
 
                 if url_trimmed.is_empty() {
@@ -39,13 +42,22 @@ pub fn ping() -> Html {
 
                 result.set(format!("Pinging {}...", formatted_url));
 
-                // 发送 HTTP GET 请求
-                match Request::get(&formatted_url).send().await {
-                    Ok(_) => {
-                        result.set(format!("Ping to {} succeeded! Website is reachable.", formatted_url));
+                // 发送 HTTP HEAD 请求，仅判断是否可以到达
+                match Request::get(&formatted_url)
+                    .method(Method::HEAD)
+                    .mode(web_sys::RequestMode::NoCors)
+                    .send()
+                    .await {
+                    Ok(response) => {
+                        let end = Date::now(); // 记录结束时间
+                        let duration = end - start;
+                        let status = response.status();
+                        result.set(format!("Ping to {} succeeded! Status: {}. 响应时间: {:.2} ms", formatted_url, status, duration));
                     }
                     Err(_) => {
-                        result.set(format!("Ping to {} failed! Website is unreachable.", formatted_url));
+                        let end = Date::now();
+                        let duration = end - start;
+                        result.set(format!("Ping to {} failed! Website is unreachable. 响应时间: {:.2} ms", formatted_url, duration));
                     }
                 }
             });
